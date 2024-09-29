@@ -22,4 +22,26 @@
 <img width="575" alt="image" src="https://github.com/user-attachments/assets/184ecba9-4162-4913-9fe2-4d463c58369a">
 
 
+## User-Service
+### pom.xml
+```
+        <!-- to health check of service -->
+                <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+         <!-- spring-boot:3 resiliency4j --> 
+               <dependency>
+			<groupId>io.github.resilience4j</groupId>
+			<artifactId>resilience4j-spring-boot3</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-circuitbreaker-resilience4j</artifactId>
+		</dependency>
 
+   
