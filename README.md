@@ -9,7 +9,7 @@
  - ### Cache: store of costly remote operation
 ##
 
-## Use case
+### Use case
 user-service communicate with catalog-service and catalog-service communicate with discount-service.If catalog-service failed, then user-service will get "500 internal server error" and user-service also down.To avoid this failure and user-service make it work rather than any failure in dependent server.To avoid this failure and user-service make it work rather than any failure in dependent server.we can achieve this by implementing the "Resilience4J" with spring.
 
 #### we can achieve this by implementing the "Resilience4J" with spring.
