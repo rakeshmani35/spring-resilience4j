@@ -1,4 +1,4 @@
-# spring-boot3-resilience4j
+# Spring-Boot3-resilience4j
 
 ## Resilience4J features and modules
  - ### Circuit Breaker: fault tolerance
