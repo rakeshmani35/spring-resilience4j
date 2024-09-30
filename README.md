@@ -1,15 +1,15 @@
 # Spring-Boot3-resilience4j
 
 ## Resilience4J features and modules
- - ### Circuit Breaker: fault tolerance
- - ### Rate Limiter: block too frequent request
- - ### Time Limiter: set a time limit when callling remote operation
- - ### Retry Machanism: automatically retry a failed remote operation
- - ### Bukhead: avoid too many concurrent request
- - ### Cache: store of costly remote operation
-##
+ - #### Circuit Breaker: fault tolerance
+ - #### Rate Limiter: block too frequent request
+ - #### Time Limiter: set a time limit when callling remote operation
+ - #### Retry Machanism: automatically retry a failed remote operation
+ - #### Bukhead: avoid too many concurrent request
+ - #### Cache: store of costly remote operation
 
-### Use case
+
+## Use case
 user-service communicate with catalog-service and catalog-service communicate with discount-service.If catalog-service failed, then user-service will get "500 internal server error" and user-service also down.To avoid this failure and user-service make it work rather than any failure in dependent server.To avoid this failure and user-service make it work rather than any failure in dependent server.we can achieve this by implementing the "Resilience4J" with spring.
 
 #### we can achieve this by implementing the "Resilience4J" with spring.
@@ -96,7 +96,7 @@ resilience4j:
         maxConcurrentCalls: 5
         maxWaitDuration: 0
 ```
- ## Circuit Breaker (circuitbreaker):
+ ### Circuit Breaker (circuitbreaker):
 ----------------------------------
 - #### slidingWindowSize: Number of calls to consider for the failure rate.
 - #### minimumNumberOfCalls: Minimum calls required before calculating failure rate.
@@ -105,23 +105,23 @@ resilience4j:
 - #### permittedNumberOfCallsInHalfOpenState: Number of test calls in half-open state.
 - #### automaticTransitionFromOpenToHalfOpenEnabled: Automatically transition to half-open after wait duration.
 
- ## Rate Limiter (rateLimiter):
+ ### Rate Limiter (rateLimiter):
 ----------------------------
 - #### limitForPeriod: Number of calls allowed per period.
 - #### limitRefreshPeriod: Time period for refreshing the limit.
 - #### timeoutDuration: Time to wait for a permit before failing.
 
-## Retry (retry):
+### Retry (retry):
 ---------------
 - #### maxRetryAttempts: Maximum number of retry attempts.
 - #### waitDuration: Time to wait between retries.
 - #### retryExceptions: Exceptions that trigger a retry.
 
-## Time Limiter (timeLimiter):
+### Time Limiter (timeLimiter):
 ----------------------------
 - #### timeoutDuration: Maximum time allowed for a call.
 
-## Bulkhead (bulkhead):
+### Bulkhead (bulkhead):
 ----------------------
 - #### maxConcurrentCalls: Maximum number of concurrent calls.
 maxWaitDuration: Time to wait for a permit before failing (0 means no wait).
