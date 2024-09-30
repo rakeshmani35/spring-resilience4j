@@ -98,12 +98,12 @@ resilience4j:
 ```
  ### Circuit Breaker (circuitbreaker):
 ----------------------------------
-- #### slidingWindowSize: Number of calls to consider for the failure rate.
-- #### minimumNumberOfCalls: Minimum calls required before calculating failure rate.
-- #### failureRateThreshold: Percentage of failures to open the circuit.
-- #### waitDurationInOpenState: Time to wait before transitioning to half-open.
-- #### permittedNumberOfCallsInHalfOpenState: Number of test calls in half-open state.
-- #### automaticTransitionFromOpenToHalfOpenEnabled: Automatically transition to half-open after wait duration.
+- #### slidingWindowSize:  Number of calls to consider for the failure rate.
+- #### minimumNumberOfCalls:  Minimum calls required before calculating failure rate.
+- #### failureRateThreshold:  Percentage of failures to open the circuit.
+- #### waitDurationInOpenState:  Time to wait before transitioning to half-open.
+- #### permittedNumberOfCallsInHalfOpenState:  Number of test calls in half-open state.
+- #### automaticTransitionFromOpenToHalfOpenEnabled:  Automatically transition to half-open after wait duration.
 
  ### Rate Limiter (rateLimiter):
 ----------------------------
