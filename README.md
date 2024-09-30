@@ -43,5 +43,12 @@
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-circuitbreaker-resilience4j</artifactId>
 		</dependency>
+```
+
+## Retry Mechanism
+
+When user-service communicate with catalog-service, catalog-service taking longer time to send response to user-service. There could be multiple reason for slowness.
+
+<img width="557" alt="image" src="https://github.com/user-attachments/assets/3c912df7-aa47-4b72-a4fc-9e2a13264584">
 
    
